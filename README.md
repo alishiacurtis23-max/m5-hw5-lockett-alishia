@@ -1,24 +1,28 @@
 Accessibility Audit Alishia Lockett
 
 Tools Used
-- Lighthouse (Chrome DevTools)
-- axe DevTools (browser extension)
-- Manual keyboard testing (Tab / Shift+Tab)
+- Lighthouse
+- axe DevTools 
+- Manual keyboard testing 
 
 Audit Fixes
 
 
-1. No skip link
-Issue: Keyboard users had to tab through nav every time.  
-Fix: Added skip link to `#main-content` and styled it to appear on focus.  
-Files: index.html, style.css
+1. Title Bar Image
+Issue: Image is not a good fit for a background
+Fix: Found a more suitable choice.
 
-2. Images missing alt text
-Issue: Several images had missing/incorrect alt text.  
-Fix: Added meaningful alt text
-Files: index.html
 
-3. Color contrast failures
-Issue: Text/background contrast failed WCAG AA in multiple areas.  
+2. Navigation
+Issue: Contrast makes it difficult to read
+Fix: Changed color of font from #555 to #fff 
+
+3. Color contrast in header, footer and body
+Issue: Text/background contrast failed in multiple areas.  
 Fix: Adjusted text and/or background colors in CSS to meet contrast standards.  
-Files: style.css
+Fix: make base text darker.
+Fix: make footer text lighter.
+
+4. Form 
+Issue: Button wont submit the form and isnt keyboard-accessible by default.
+Fix: change it to <button type="submit" class="submit-btn">
